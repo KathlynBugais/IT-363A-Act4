@@ -1,11 +1,12 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomePage } from './home.page';
+import { Routes, RouterModule } from '@angular/router';
+
+import { TablinksPage } from './tablinks.page';
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomePage,
+    path: 'tablinks',
+    component: TablinksPage,
     children: [
       {
         path: 'profile',
@@ -21,14 +22,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/home/profile',
+        redirectTo: '/tablinks/profile',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/home/profile',
+    redirectTo: '/tablinks/profile',
     pathMatch: 'full'
   }
 ];
@@ -36,6 +37,6 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class HomePageRoutingModule {}
+export class TablinksPageRoutingModule {}
