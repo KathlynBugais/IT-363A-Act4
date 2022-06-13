@@ -1,43 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-  Add Contact
+      Add Contact
     </ion-title>
-    <ion-buttons slot="primary">
+    <ion-buttons slot="tertiary">
       <ion-button (click)="addUser()">
-        
-        <ion-icon slot="icon-only" name="person-add-outline" size="large" color="dark"></ion-icon>
+        <ion-icon slot="icon-only" name="add-circle-outline" size="large"></ion-icon>
       </ion-button>
     </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
-<ion-content fullscreen class="component-content">
+<ion-content [fullscreen]="true">
 <ion-accordion-group *ngFor="let contact of contactlist; let i = index">
   <ion-accordion value="contacts">
     <ion-item slot="header">
       <ion-item-sliding>
         <ion-item-options side="start">
-          <ion-item-option (click)="confirmation(i)"><ion-icon size="large" name="trash" color="danger"></ion-icon></ion-item-option>
-          <ion-item-option  (click)="sendMessage()">  <ion-icon size="large" name="mail" color="dark"></ion-icon></ion-item-option>
+          <ion-item-option  (click)="confirmation(i)"><ion-icon size="large" name="trash" color="danger"></ion-icon></ion-item-option>
+          <ion-item-option (click)="redirectTo()">  <ion-icon size="large" name="mail" color="dark"></ion-icon></ion-item-option>
         </ion-item-options>
-    
-        <ion-item color="light"> 
-            <ion-thumbnail slot="start"class="thumb">
-            <img src="assets/profile.jpg">
+        <ion-item>
+            <ion-thumbnail slot="start">
             </ion-thumbnail>
+            <ion-icon name="person"></ion-icon>
           <ion-label >{{ contact.name }}</ion-label>
-    
-        </ion-item>
-      </ion-item-sliding>
-    
-    </ion-item>
 
-    <ion-list slot="content" >
+        </ion-item>
+      </ion-item-sliding> 
+      
+    </ion-item>
+    <ion-list slot="content">
       <ion-item>
-        <ion-thumbnail slot="start" >
+        <ion-thumbnail slot="start">
           </ion-thumbnail>
-          <ion-icon name="mail-outline"></ion-icon>
-        <ion-label >{{ contact.email}}</ion-label>
+        <ion-label >{{ contact.email }}</ion-label>
       </ion-item>
       <ion-item>
         <ion-thumbnail slot="start">
@@ -49,5 +46,4 @@
     </ion-list>
   </ion-accordion>
   </ion-accordion-group>
-
- 
+  

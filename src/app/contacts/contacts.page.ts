@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 export class  ContactsPage {
 
   contactlist  = [
-    {id: 1, name: 'Ma. Kathlyn A. Bugais', email: 'makathlyn.bugais@evsu.edu.ph',number: '09153948940'}
+    {id: 1, name: 'Kathlyn', email: 'kathlynbugais@gmail.com'  ,number: '09153948940'},
+    {id: 2, name: 'Kathlyn Bugais', email: 'makathlyn.bugais@evsu.edu.ph'  ,number: '09773642199'},
   ]
   constructor(public alertController: AlertController, public router: Router) {
   }

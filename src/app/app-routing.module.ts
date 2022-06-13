@@ -26,7 +26,11 @@ const routes: Routes = [
   {
     path: 'tablinks',
     loadChildren: () => import('./tablinks/tablinks.module').then( m => m.TablinksPageModule)
+  },  {
+    path: 'mailpage',
+    loadChildren: () => import('./mailpage/mailpage.module').then( m => m.MailpagePageModule)
   },
+
 ];
 
 @NgModule({

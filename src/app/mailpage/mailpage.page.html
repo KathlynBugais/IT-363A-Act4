@@ -1,0 +1,14 @@
+<ion-header> 
+  <ion-toolbar color="tertiary">
+      <ion-icon name="arrow-back-circle-outline" slot="start" size="large"(click)="back()"></ion-icon>
+    <ion-title><p align="center">Inbox</p></ion-title>
+  </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <div class="send">
+      
+    <ion-input placeholder="send message.." class="input"text-right id="input" [(ngModel)]="inputValue"></ion-input>
+    <ion-button class="button">Send<ion-icon name="send" slot="end" size="large"(click)="back()"></ion-icon></ion-button>
+  </div>
+  </ion-content>
+  
